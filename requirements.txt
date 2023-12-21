@@ -1,0 +1,9 @@
+beautifulsoup4==4.12.2
+celery==5.3.6
+lxml==4.9.4
+pyquery==2.0.0
+requests==2.31.0
+Scrapy==2.11.0
+selenium==4.16.0
+mysql-connector-python
+
