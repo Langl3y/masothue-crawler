@@ -18,11 +18,16 @@ def insert_data(company_list):
         company_owner = json_data['company_owner']
         company_address = json_data['company_address']
 
-        # NHAP DATA VAO MYSQL
-        insert_query = "INSERT INTO companies (company_name, company_id, company_owner, company_address) VALUES (%s, %s, %s, %s)"
-        values = (company_name, company_id, company_owner, company_address)
-        cursor.execute(insert_query, values)
+        query = "SELECT company_id FROM companies WHERE company_id = %s"
+        cursor.execute(query, (company_id,))
+        result = cursor.fetchone()
 
+        if not result:
+            # NHAP DATA VAO MYSQL
+            insert_query = "INSERT INTO companies (company_name, company_id, company_owner, company_address) VALUES (%s, %s, %s, %s)"
+            values = (company_name, company_id, company_owner, company_address)
+            cursor.execute(insert_query, values)
+            
     connection.commit()
 
     cursor.close()
