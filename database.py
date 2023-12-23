@@ -27,7 +27,7 @@ def insert_data(company_list):
             insert_query = "INSERT INTO companies (company_name, company_id, company_owner, company_address) VALUES (%s, %s, %s, %s)"
             values = (company_name, company_id, company_owner, company_address)
             cursor.execute(insert_query, values)
-
+            
     connection.commit()
 
     cursor.close()
