@@ -21,6 +21,7 @@ gialai = document('a[href="/tra-cuu-ma-so-thue-theo-tinh/gia-lai-563"]')
 hagiang = document('a[href="/tra-cuu-ma-so-thue-theo-tinh/ha-giang-529"]')
 hanam = document('a[href="/tra-cuu-ma-so-thue-theo-tinh/ha-nam-162"]')
 hanoi = document('a[href="/tra-cuu-ma-so-thue-theo-tinh/ha-noi-7"]')
+
 hatinh = document('a[href="/tra-cuu-ma-so-thue-theo-tinh/ha-tinh-342"]')
 haiduong = document('a[href="/tra-cuu-ma-so-thue-theo-tinh/hai-duong-147"]')
 haiphong = document('a[href="/tra-cuu-ma-so-thue-theo-tinh/hai-phong-99"]')
