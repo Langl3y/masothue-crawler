@@ -18,7 +18,7 @@ def insert_data(company_list, table_name):
         company_owner = json_data['company_owner']
         company_address = json_data['company_address']
 
-        query = "SELECT company_id FROM companies WHERE company_id = %s"
+        query = f"SELECT company_id FROM {table_name} WHERE company_id = %s"
         cursor.execute(query, (company_id,))
         result = cursor.fetchone()
 

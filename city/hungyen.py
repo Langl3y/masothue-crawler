@@ -8,7 +8,7 @@ def hungyen_crawler():
         company_list = scrape_companies(url)
         print(company_list)
 
-        insert_data(company_list)
+        insert_data(company_list, "hungyen")
 
 
 if __name__ == '__main__':

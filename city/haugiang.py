@@ -8,7 +8,7 @@ def haugiang_crawler():
         company_list = scrape_companies(url)
         print(company_list)
 
-        insert_data(company_list)
+        insert_data(company_list, "haugiang")
 
 
 if __name__ == '__main__':
