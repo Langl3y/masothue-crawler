@@ -1,7 +1,7 @@
 import mysql.connector
 
 
-def insert_data(company_list):
+def insert_data(company_list, table_name):
     connection = mysql.connector.connect(
         host="localhost",
         user='root',
@@ -24,7 +24,7 @@ def insert_data(company_list):
 
         if result is None:
             # NHAP DATA VAO MYSQL
-            insert_query = "INSERT INTO companies (company_name, company_id, company_owner, company_address) VALUES (%s, %s, %s, %s)"
+            insert_query = f"INSERT INTO {table_name} (company_name, company_id, company_owner, company_address) VALUES (%s, %s, %s, %s)"
             values = (company_name, company_id, company_owner, company_address)
             cursor.execute(insert_query, values)
             

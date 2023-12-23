@@ -1,6 +1,6 @@
 from pyquery import PyQuery as pq
-from parser import parse_company
-from get_html import get_html
+from data_processing.parser import parse_company
+from data_processing.get_html import get_html
 
 
 def scrape_companies(url):

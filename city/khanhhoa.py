@@ -1,8 +1,8 @@
-from scraper import scrape_companies
-from database import insert_data
+from data_processing.scraper import scrape_companies
+from data_processing.database import insert_data
 
 
-def main():
+def khanhhoa_crawler():
     for i in range(1, 20):
         url = f'https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/khanh-hoa-26?page={i}'
         company_list = scrape_companies(url)
@@ -12,4 +12,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    khanhhoa_crawler()
