@@ -2,9 +2,12 @@ import requests
 from lxml.html import HtmlElement
 from pyquery import PyQuery as pq
 import mysql.connector
+from fake_useragent import UserAgent
+
+ua = UserAgent()
 
 url_tinh_thanh = 'https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/'
-headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'}
+headers = {'User-Agent': ua.random }
 
 html_string = requests.get(url_tinh_thanh, headers=headers).content.decode('utf-8')
 
@@ -30,6 +33,8 @@ khanhhoa = document('a[href="/tra-cuu-ma-so-thue-theo-tinh/khanh-hoa-26"]')
 
 cities = [daknong, dienbien, dongnai, gialai, hagiang, hanam, hanoi, hatinh, haiduong, haiphong, haugiang, hochiminh, hoabinh, hungyen, khanhhoa]
 
+for city in cities:
+    print(city)
 
 connection = mysql.connector.connect(
     host="localhost",
