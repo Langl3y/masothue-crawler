@@ -6,3 +6,11 @@ from .hochiminh import *
 from .hatinh import *
 from .haiphong import *
 from .haiduong import *
+from .daknong import *
+from .dienbien import *
+from .dongnai import *
+from dongthap import *
+from gialai import *
+from hagiang import *
+from hanam import *
+from hanoi import *
